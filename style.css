@@ -1,0 +1,520 @@
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Habibi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+/*-------------------- CSS RESET --------------------------------------------------- */
+body {
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+  --primary-color: #06A816;
+  --secondary-color: #E75D02;
+  --text-color: #ffffff;
+}
+
+/* -------------------- GLOBAL STYLES (mobile first/small) -------------------- */
+/* Body Styles */
+body {
+  font-family: "Habibi", serif;
+}
+
+/* Header Styles */
+header {
+  background-color: #06A816;
+  color: #ffffff;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Irish Grover", serif;
+}
+
+header h1 {
+  margin: 0 0 0 10px;
+  font-size: 36px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.851);
+}
+
+header p {
+  margin: 0 0 0 10px;
+  font-family: "Habibi", serif;
+  font-size: 18px;
+  text-align: left;
+  transition: text-align 0.5s ease;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #06a81600;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #E75D02;
+  padding: 3px 40px;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+  width: 150px;
+  text-align: center;
+}
+
+#TopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #E75D02;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.171);
+}
+
+/* Section Styles */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-size: 30px;
+  color: #000000;
+}
+
+h3 {
+  font-size: 24px;
+  color: #000000;
+}
+
+section p {
+  font-family: "Habibi", serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Grid Layout for Fruits and Vegetables */
+#grid_fruit, #grid_veg {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+#grid_fruit h3, #grid_veg h3 {
+  text-align: center;
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+}
+
+#grid_fruit figure, #grid_veg figure {
+  position: relative;
+  text-align: center;
+  margin: 0;
+}
+
+#grid_fruit img, #grid_veg img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+
+#grid_fruit figcaption, #grid_veg figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding: 10px;
+  margin: 0;
+  font-family: "Habibi", serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Styles for contact and hours sections */
+.contact_hours_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px;
+}
+
+.contact_hours {
+  background-color: #06A816;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 0px;
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 275px;
+  height: auto;
+}
+
+#contact {
+  order: 1;
+}
+
+#hours {
+  order: 2;
+}
+
+.contact_hours h2, .contact_hours a {
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.contact_hours address, .contact_hours dl {
+    font-family: "Habibi", serif; 
+    line-height: 1.5;
+    margin-top: 0;
+    padding-top:20px;
+    font-style: normal;
+  }
+
+.contact_hours a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact_hours a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ffffff;
+    color: #06A816;
+    text-align: center;
+    padding: 10px 0; 
+    margin-top: 0px;
+    height: 10px;
+    line-height: 1.5;
+    position: relative;
+  }
+  
+  footer p {
+        margin: 0;
+        font-size: 25px;
+        padding: 0 10px;
+        position: relative;
+        top: -40px;
+  }
+/* Small (100px - 833px) */
+@media screen and (min-width: 100px) and (max-width: 833px) {
+    header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 100%;
+    }
+  
+    header h1, header p {
+      margin: 0;
+      text-align: center;
+    }
+  
+    nav {
+      position: static;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    #contact_hours_container {
+      flex-direction: column;
+      padding-bottom: 5px;
+    }
+    .contact_hours{
+        flex: 1 1 auto;
+        margin-bottom: 0;
+    }
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul li {
+      margin: 5px 0;
+    }
+  
+    #grid_fruit, #grid_veg {
+      grid-template-columns: 1fr;
+    }
+  
+    #grid_fruit figure, #grid_veg figure {
+      margin-bottom: 10px;
+    }
+    #contact, #hours {
+      flex: 1 1 auto;
+      margin: 0;
+    }
+    #hours{
+      padding-bottom: 20px;
+    }
+    address, dd, dl {
+      text-align: center;
+      margin: 0;
+    }
+    footer {
+        background-color: #ffffff;
+        color: #06A816;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 0px;
+        height: 10px;
+        line-height: 1.5;
+        position: relative;
+        clear: both;
+      }
+    
+      footer p {
+        margin: 0;
+        font-size: 25px;
+        padding: 0 10px;
+        position: relative;
+        top: -30px;
+      }
+    }
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width: 834px) and (max-width: 1279px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    margin-left: 10px;
+  }
+
+  header p {
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  nav {
+    position: static;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  nav ul li {
+    margin: 0 100px;
+  }
+
+  #grid_fruit, #grid_veg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact_hours_container {
+    justify-content: center;
+  }
+
+  .contact_hours {
+    flex: 1 1 45%;
+  }
+}
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  header p {
+    text-align: left;
+    margin: 10px 0 0 0;
+    order: 2;
+  }
+
+  nav {
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  #grid_fruit, #grid_veg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact_hours_container {
+    justify-content: space-between;
+  }
+
+  .contact_hours {
+    flex: 1 1 45%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  #contact {
+    order: 1;
+  }
+
+  #hours {
+    order: 2;
+  }
+
+  .contact_hours h2, .contact_hours a {
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  .contact_hours address, .contact_hours dl {
+    text-align: center;
+    align-self: center;
+    margin-top: -70px;
+    font-style: normal;
+}
+
+  .buttons_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .buttons_container button {
+    margin: 0 10px;
+  }
+}
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width: 1440px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  header p {
+    text-align: left;
+    margin: 10px 0 0 0;
+    order: 2;
+  }
+
+  nav {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li {
+    margin: 0 20px;
+  }
+
+  #grid_fruit, #grid_veg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .contact_hours_container {
+    justify-content: space-between;
+    padding-top: 10px;
+
+  }
+
+  .contact_hours {
+    flex: 1 1 45%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  #contact {
+    order: 1;
+  }
+
+  #hours {
+    order: 2;
+  }
+
+  .contact_hours h2, .contact_hours a {
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  .contact_hours address, .contact_hours dl {
+    text-align: center;
+    align-self: center;
+    margin-top: -70px;
+    padding-top: 20px;
+  }
+}
