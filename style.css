@@ -9,6 +9,7 @@ body {
   padding: 0;
   background-color: #ffffff;
   overflow-x: hidden;
+  font-family: "Habibi", serif;
 }
 
 /* -------------------- ROOT VARIABLES --------------------------------------- */
@@ -19,10 +20,6 @@ body {
 }
 
 /* -------------------- GLOBAL STYLES (mobile first/small) -------------------- */
-/* Body Styles */
-body {
-  font-family: "Habibi", serif;
-}
 
 /* Header Styles */
 header {
