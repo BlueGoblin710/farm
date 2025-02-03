@@ -246,8 +246,8 @@ footer {
         position: relative;
         top: -40px;
   }
-/* Small (100px - 833px) */
-@media screen and (min-width: 100px) and (max-width: 833px) {
+/* Mobile first/Small */
+@media screen and (min-width: 428px) and (max-width: 833px) {
     header {
       text-align: center;
       display: flex;
